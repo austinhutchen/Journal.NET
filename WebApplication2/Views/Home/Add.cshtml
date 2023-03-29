@@ -1,28 +1,44 @@
 @{
     ViewData["Title"] = "Home page (REDIRECT 1)";
-    ViewData["Style"] = "background-color:cadetblue";
 }
+<header >
 
-<div class="text-center" xmlns="http://www.w3.org/1999/html">
     <script>
-     const person = {};
-    const myForm=document.getElementById("form");
-    myForm.addEventListener("submit",(e)=>{
-        e.preventDefault();
-        const data = new FormData(myForm);
-      for (item of data){
-          person.Name+=item;}
-    });
+     const person = new Object();
+    getData = ( person ) => {
+        const myForm=document.getElementById("form");
+        if (myForm){
+             myForm.addEventListener("submit",(e)=> {
+                                    e.preventDefault();
+                                    const data = new FormData(myForm);
+                                    for (let x in data) {
+                                        person.Name += data[x];
+                                    }
+                                });
+                                 alert('DONE');
+                            
+                 }
+                else{ alert("FAIL");
+                    }
+       }
     
-  
-   
+
     </script>
-    <h1 class="display-4"><u><b>WELCOME, USER!</b></u></h1>
+            
+</header>
+<div class="text-center" xmlns="http://www.w3.org/1999/html">
+    <h1 class="display-4">
+        <u>
+            <b>WELCOME, USER!</b>
+        </u>
+    </h1>
     <img alt="welcome img" src="https://media.istockphoto.com/id/1223088904/vector/flag-ribbon-welcome-old-school-flag-banner.jpg?s=612x612&w=0&k=20&c=7YSaR2mu9H2ezvyONvjtqf8HRTzBaya1wNYFfwAiW80=">
     <h2> Submit your input below this line.</h2>
-   <form onsubmit="alert(person.name)" style="padding-top:40px">
-    Enter name: <input type="text" required placeholder="Your Full Name">
-    <input type="submit">
-  </form> 
+    <form onsubmit="getData(person)" style="padding-top:40px">
+        Enter name: <input type="text" required placeholder="Your Full Name">
+        <input type="submit">
+    </form>
     <p style="margin-top: 200px" class="center">This is a basic footer with inline styling.</p>
+    <footer>
+    </footer>
 </div>
