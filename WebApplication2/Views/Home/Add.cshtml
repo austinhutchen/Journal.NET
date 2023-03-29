@@ -3,9 +3,26 @@
     ViewData["Style"] = "background-color:cadetblue";
 }
 
-<div class="text-center" >
+<div class="text-center" xmlns="http://www.w3.org/1999/html">
+    <script>
+    const myForm=document.getElementById("myForm");
+    myForm.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        alert("Submitted");
+    });
+    const person = {};
+    function getData(p) {
+        person.name=p;
+        alert(person.name);
+    }
+   
+    </script>
     <h1 class="display-4"><u><b>WELCOME, USER!</b></u></h1>
-    <img alt="welcome img"src="https://media.istockphoto.com/id/1223088904/vector/flag-ribbon-welcome-old-school-flag-banner.jpg?s=612x612&w=0&k=20&c=7YSaR2mu9H2ezvyONvjtqf8HRTzBaya1wNYFfwAiW80="></img>
+    <img alt="welcome img" src="https://media.istockphoto.com/id/1223088904/vector/flag-ribbon-welcome-old-school-flag-banner.jpg?s=612x612&w=0&k=20&c=7YSaR2mu9H2ezvyONvjtqf8HRTzBaya1wNYFfwAiW80=">
     <h2> Submit your input below this line.</h2>
-    <p style="margin-top: 200px" class="center">This is a basic paragraph with inline styling.</p>
+   <form onsubmit="getData(event)" style="padding-top:40px">
+    Enter name: <input type="text" required placeholder="Your Full Name">
+    <input type="submit">
+  </form> 
+    <p style="margin-top: 200px" class="center">This is a basic footer with inline styling.</p>
 </div>
