@@ -11,3 +11,11 @@ getData = ( person ) => {
     }
 
 }
+
+enterJournal = (journal) => {// use state here to save journal entry , maybe into a txt file for now locally
+    const text=document.getElementById("entry");
+    if (text){
+        journal.entry=text.value;
+       alert(journal.entry)
+    }
+}

@@ -3,6 +3,7 @@
 }
 <header >
     <script>const person = new Object();
+    const journal = new Object();
    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
    // full date will be needed for storing entries in the archive
    const d = new Date();
@@ -25,8 +26,9 @@
         Enter your name: <input type ="text" required placeholder ="Your full name"></input>
         <input type="submit">
     </form>
-    <form>
+    <form id="form" onsubmit="enterJournal(journal)" style="padding-top:40px">
         Enter your journal entry: <textarea id="entry" required placeholder="Your journal entry"></textarea>
+        <input type="submit">
     </form>
         
     <p style="margin-top: 200px" class="center">This is a basic footer with inline styling.</p>
