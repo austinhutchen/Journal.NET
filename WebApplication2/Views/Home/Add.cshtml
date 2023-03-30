@@ -3,8 +3,11 @@
 }
 <header >
     <script>const person = new Object();
-     today = Date();
-    
+   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+   
+   const d = new Date();
+   let day = days[d.getDay()];
+   document.writeln(day);
     </script>
 
     <script src="js/site.js">

@@ -11,4 +11,3 @@ getData = ( person ) => {
     }
 
 }
-    
