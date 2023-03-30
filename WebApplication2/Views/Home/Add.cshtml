@@ -2,11 +2,13 @@
     ViewData["Title"] = "Home page (REDIRECT 1)";
 }
 <header >
-    <script>const person = new Object();</script>
+    <script>const person = new Object();
+     today = Date();
+    
+    </script>
 
     <script src="js/site.js">
     </script>
-            
 </header>
 <div class="text-center" xmlns="http://www.w3.org/1999/html">
     <h1 class="display-4">
@@ -17,9 +19,13 @@
     <img alt="welcome img" src="https://media.istockphoto.com/id/1223088904/vector/flag-ribbon-welcome-old-school-flag-banner.jpg?s=612x612&w=0&k=20&c=7YSaR2mu9H2ezvyONvjtqf8HRTzBaya1wNYFfwAiW80=">
     <h2> Submit your input below this line.</h2>
     <form id="form" onsubmit="getData(person)" style="padding-top:40px">
-        Enter name: <input type="text" id="name" required placeholder="Your Full Name">
+        Enter your name: <input type ="text" required placeholder ="Your full name"></input>
         <input type="submit">
     </form>
+    <form>
+        Enter your journal entry: <textarea id="entry" required placeholder="Your journal entry"></textarea>
+    </form>
+        
     <p style="margin-top: 200px" class="center">This is a basic footer with inline styling.</p>
     <footer>
     </footer>

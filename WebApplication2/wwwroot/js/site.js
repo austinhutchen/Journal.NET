@@ -6,10 +6,9 @@ getData = ( person ) => {
     const text=document.getElementById("name");
     if (text){
         person.Name=text.value;
-        alert( ("Hello, ")+person.Name);
+        alert("Hello, "+person.Name)
+   // use state to update variables in the actual document without appending
+    }
 
-    }
-    else{ alert("FAIL");
-    }
 }
     
