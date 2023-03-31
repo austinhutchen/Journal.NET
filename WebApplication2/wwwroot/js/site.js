@@ -34,7 +34,9 @@ class User {
         alert(this.Name);
         console.log(this.Name);
     }
-
+   getName(){
+        return this.Name;
+   }
     getData() {
         const text = document.getElementById("name");
         if (text) {

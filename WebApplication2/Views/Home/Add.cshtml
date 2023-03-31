@@ -7,13 +7,18 @@
          var j;
         if (typeof p === 'undefined' || typeof j === 'undefined'){
             p = new User();
-            j = new Journal();}
-          
+            j = new Journal();
+        }
+        // use state to fix below code that never writes because script executes on startup
+          else if (typeof p!=='undefined' && typeof j !== 'undefined'){
+               document.getElementById('greeting').innerHTML += p.getName();
+              }
            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
            // full date will be needed for storing entries in the archive
            const d = new Date();
            let day = days[d.getDay()];
            document.writeln(day);
+           
         </script>
 }
 
@@ -21,7 +26,7 @@
 <div class="text-center" xmlns="http://www.w3.org/1999/html">
     <h1 class="display-4">
         <u>
-            <b>WELCOME, USER!</b>
+            <b id="greeting">WELCOME !</b>
         </u>
     </h1>
     <img alt="welcome img" src="https://media.istockphoto.com/id/1223088904/vector/flag-ribbon-welcome-old-school-flag-banner.jpg?s=612x612&w=0&k=20&c=7YSaR2mu9H2ezvyONvjtqf8HRTzBaya1wNYFfwAiW80=">
