@@ -1,20 +1,20 @@
 @{
-    int i = 0;
     ViewData["Title"] = "New Entry";
     <script src="~/js/site.js"></script>
-    if (i<1)
-    {
-        i++;
+ 
         <script>
-          let p = new User();
-            let j = new Journal();
+         var p;
+         var j;
+        if (typeof p === 'undefined' || typeof j === 'undefined'){
+            p = new User();
+            j = new Journal();}
+          
            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
            // full date will be needed for storing entries in the archive
            const d = new Date();
            let day = days[d.getDay()];
            document.writeln(day);
         </script>
-    }
 }
 
 
