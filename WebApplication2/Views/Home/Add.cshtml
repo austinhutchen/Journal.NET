@@ -7,11 +7,12 @@
             let j = new Journal();
           
         // use state to fix below code that never writes because script executes on startup
-          document.addEventListener("DOMContentLoaded", function() {  document.getElementById("button2").addEventListener("click", (event)=>{
-                                                                                           j.enterJournal(event);
+          document.addEventListener("DOMContentLoaded", function() {  
+              document.getElementById("button2").addEventListener("click", (event)=>{
+                  j.enterJournal(event);
                                                                                          });
-                                                                                    document.getElementById("button1").addEventListener("click", (event)=>{
-                                                                                          p.getData(event);
+               document.getElementById("button1").addEventListener("click", (event)=>{
+                  p.getData(event);
                                                                                          }); });
            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
            // full date will be needed for storing entries in the archive
