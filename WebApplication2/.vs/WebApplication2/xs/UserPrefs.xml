@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{EC39EC8F-A18B-4C5A-B93F-CAF687406BE1}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.WebApplication2 PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Add.cshtml">
+    <Files>
+      <File FileName="Program.cs" Line="27" Column="1" />
+      <File FileName="Views/Home/Add.cshtml" Line="5" Column="13" />
+      <File FileName="Views/Home/Archive.cshtml" Line="1" Column="1" />
+      <File FileName="wwwroot/js/site.js" Line="1" Column="1" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebApplication2" expanded="True">
+            <Node name="WebApplication2" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="Add.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

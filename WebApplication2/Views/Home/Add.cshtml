@@ -1,19 +1,23 @@
 @{
+    int i = 0;
     ViewData["Title"] = "New Entry";
+    <script src="~/js/site.js"></script>
+    if (i<1)
+    {
+        i++;
+        <script>
+          let p = new User();
+            let j = new Journal();
+           const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+           // full date will be needed for storing entries in the archive
+           const d = new Date();
+           let day = days[d.getDay()];
+           document.writeln(day);
+        </script>
+    }
 }
-<header >
-    <script>const person = new Object();
-    const journal = new Object();
-   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-   // full date will be needed for storing entries in the archive
-   const d = new Date();
-   let day = days[d.getDay()];
-   document.writeln(day);
-    </script>
 
-    <script src="js/site.js">
-    </script>
-</header>
+
 <div class="text-center" xmlns="http://www.w3.org/1999/html">
     <h1 class="display-4">
         <u>
@@ -22,15 +26,15 @@
     </h1>
     <img alt="welcome img" src="https://media.istockphoto.com/id/1223088904/vector/flag-ribbon-welcome-old-school-flag-banner.jpg?s=612x612&w=0&k=20&c=7YSaR2mu9H2ezvyONvjtqf8HRTzBaya1wNYFfwAiW80=">
     <h2> Submit your input below this line.</h2>
-    <form id="form" onsubmit="getData(person)" style="padding-top:40px">
-        Enter your name: <input type ="text" required placeholder ="Your full name"></input>
+    <form id="form" onsubmit="p.getData()" style="padding-top:40px">
+        Enter your name: <input type="text" required placeholder="Your full name"></input>
         <input type="submit">
     </form>
-    <form id="form" onsubmit="enterJournal(journal)" style="padding-top:40px">
+    <form id="form2" onsubmit="j.enterJournal()" style="padding-top:40px">
         Enter your journal entry: <textarea id="entry" required placeholder="Your journal entry"></textarea>
         <input type="submit">
     </form>
-        
+
     <p style="margin-top: 200px" class="center">This is a basic footer with inline styling.</p>
     <footer>
     </footer>
