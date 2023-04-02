@@ -12,7 +12,7 @@
     display() {
         let string="";
         for (let i = 0; i < this.size; i++) {
-            string+="ENTRY "+(i+1).toString()+":  "+ this.entries[i]+" ";
+            string+="ENTRY "+(i+1).toString()+":  "+ this.entries[i]+"\n";
         }
         alert(string);
     }
