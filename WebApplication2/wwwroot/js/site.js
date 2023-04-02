@@ -10,8 +10,8 @@
     }
 
     display() {
-        let string="";
-        for (let i = 0; i < this.size; i++) {
+        var string="";
+        for (var i = 0; i < this.size; i++) {
             string+="ENTRY "+(i+1).toString()+":  "+ this.entries[i]+"\n";
         }
         alert(string);
@@ -50,10 +50,8 @@ class User {
     ev.preventDefault();
     const text = document.getElementById("name");
     document.forms[0].reset();
-    if (text) {
         this.setName(text.value);
         this.display();
         // use state to update variables in the actual document without appending
-    }
 }
 }

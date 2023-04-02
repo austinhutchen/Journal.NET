@@ -4,8 +4,8 @@
     <script src="~/js/site.js"></script>
  
         <script>
-           let p = new User();
-            let j = new Journal();
+           const p = new User();
+            const j = new Journal();
           
           document.addEventListener("DOMContentLoaded", function() {  
               document.getElementById("button2").addEventListener("click", (event)=>{
@@ -17,7 +17,7 @@
            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
            // full date will be needed for storing entries in the archive
            const d = new Date();
-           let day = days[d.getDay()];
+           const day = days[d.getDay()];
            document.writeln(day);
         
            
