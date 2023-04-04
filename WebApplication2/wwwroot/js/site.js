@@ -9,7 +9,7 @@
         this.size++;
     }
 
-    display() {
+   display() {
 
         let string = "";
         for (let i = 0; i < this.size; i++) {
@@ -18,17 +18,22 @@
         alert(string);
     }
 
-    enterJournal = (ev) => {
+    enterJournal = (ev,data) => {
         // use state here to save journal entry , maybe into
         // a txt file for now locally
         ev.preventDefault();
         const text = document.getElementById("entry");
+        if(data!==undefined){
+            for(let i=0;i<data.size;i++) {
+                this.add(data.entries[i]);
+            }
+            this.display();
+        }
         if (text) {
             this.add(text.value);
         
             this.display();
         }
-
     }
 
 }
@@ -46,14 +51,7 @@ class User {
         alert(this.Name);
         console.log(this.Name);
     }
-
-    getName() {
-        if (this.Name) {
-            return this.Name;
-        } else {
-            return '0';
-        }
-    }
+    
 
     getData = (ev) => {
         ev.preventDefault();

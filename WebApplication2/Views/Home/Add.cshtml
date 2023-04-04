@@ -9,19 +9,18 @@
                               let serial=JSON.stringify(j);
                               localStorage.setItem("Journal",serial); }
                 check=()=>{
-                  if (localStorage.getItem("Journal")===true)  {
-                      console.log(localStorage.getItem("Journal"));
+                  if (localStorage.getItem("Journal")!==null)  {
                       return true;
                 }
                   }
            
        document.addEventListener("DOMContentLoaded", function(){
             const p = new User();
+              let j = new Journal();
               if (check()===true){
-                         j = JSON.parse(localStorage.getItem("Journal"));
-                       
+                        let dobj = JSON.parse(localStorage.getItem("Journal"));
                                       document.getElementById("button2").addEventListener("click", (event)=>{
-                                          j.enterJournal(event);
+                                          j.enterJournal(event,dobj);
                                           updateLocal(j);
                                                                                                                  });
                                        document.getElementById("button1").addEventListener("click", (event)=>{
@@ -29,10 +28,9 @@
                                                                                                                  }); 
                         }
                     else{
-                        var j = new Journal();
                        
                                       document.getElementById("button2").addEventListener("click", (event)=>{
-                                          j.enterJournal(event);
+                                          j.enterJournal(event,undefined);
                                           updateLocal(j);
                                                                                                                  });
                                        document.getElementById("button1").addEventListener("click", (event)=>{
