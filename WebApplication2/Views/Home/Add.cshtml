@@ -18,7 +18,7 @@
             const p = new User();
               let j = new Journal();
               if (check()===true){
-                        let d = JSON.parse(localStorage.getItem("Journal"));
+                        var d = JSON.parse(localStorage.getItem("Journal"));
                                       document.getElementById("button2").addEventListener("click", (event)=>{
                                           j.enterJournal(event,d);
                                           updateLocal(j);
