@@ -22,16 +22,14 @@
         // use state here to save journal entry , maybe into
         // a txt file for now locally
         ev.preventDefault();
-        const text = document.getElementById("entry");
-        if(data!==undefined){
+        if(data!==null){
             for(let i=0;i<data.size;i++) {
                 this.add(data.entries[i]);
-            }
-            this.display();
+            } 
         }
+        const text = document.getElementById("entry");
         if (text) {
             this.add(text.value);
-        
             this.display();
         }
     }
