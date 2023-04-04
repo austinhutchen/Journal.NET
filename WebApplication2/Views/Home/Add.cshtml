@@ -1,43 +1,48 @@
 @{
     // find a way to do C file I/O on refresh to save locally
     ViewData["Title"] = "New Entry";
+}
     <script src="~/js/site.js"></script>
  
-        <script>
-           const p = new User();
-                  updateLocal=(j)=>{
-                      let jserial=JSON.stringify(j);
-                      localStorage.setItem("Journal",jserial); }
-        check=()=>{
-          if (localStorage.getItem("Journal")===true)  {
-              return true;
-        }
-         }
-        if (check===true){
-            let j = JSON.parse(localStorage.getItem("Journal"));
-            document.addEventListener("DOMContentLoaded", function() {  
-                          document.getElementById("button2").addEventListener("click", (event)=>{
-                              j.enterJournal(event);
-                              updateLocal(j);
-                                                                                                     });
-                           document.getElementById("button1").addEventListener("click", (event)=>{
-                              p.getData(event);
-                                                                                                     }); });
-            }
-        else{
-            let j = new Journal();
-            document.addEventListener("DOMContentLoaded", function() {  
-                          document.getElementById("button2").addEventListener("click", (event)=>{
-                              j.enterJournal(event);
-                              updateLocal(j);
-                                                                                                     });
-                           document.getElementById("button1").addEventListener("click", (event)=>{
-                              p.getData(event);
-                                                                                                     }); });
-            
-                    
-          }
-          
+    <script>
+         updateLocal=(j)=>{
+                              let jserial=JSON.stringify(j);
+                              localStorage.setItem("Journal",jserial); }
+                check=()=>{
+                  if (localStorage.getItem("Journal")===true)  {
+                      console.log(localStorage.getItem("Journal"));
+                      return true;
+                }
+                  }
+           
+       document.addEventListener("DOMContentLoaded", function(){
+            const p = new User();
+              if (check()===true){
+                        var j = JSON.parse(localStorage.getItem("Journal"));
+                       
+                                      document.getElementById("button2").addEventListener("click", (event)=>{
+                                          j.enterJournal(event);
+                                          updateLocal(j);
+                                                                                                                 });
+                                       document.getElementById("button1").addEventListener("click", (event)=>{
+                                          p.getData(event);
+                                                                                                                 }); 
+                        }
+                    else{
+                        var j = new Journal();
+                       
+                                      document.getElementById("button2").addEventListener("click", (event)=>{
+                                          j.enterJournal(event);
+                                          updateLocal(j);
+                                                                                                                 });
+                                       document.getElementById("button1").addEventListener("click", (event)=>{
+                                          p.getData(event);
+                                                                                                                 }); 
+                        
+                                
+                      }
+           
+       });
           let today = new Date();
           const dd = String(today.getDate()).padStart(2, '0');
           const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -48,7 +53,7 @@
         
            
         </script>
-}
+
 
 
 <div class="text-center" xmlns="http://www.w3.org/1999/html">
