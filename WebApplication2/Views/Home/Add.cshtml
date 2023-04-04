@@ -6,8 +6,8 @@
  
     <script>
          updateLocal=(j)=>{
-                              let jserial=JSON.stringify(j);
-                              localStorage.setItem("Journal",jserial); }
+                              let serial=JSON.stringify(j);
+                              localStorage.setItem("Journal",serial); }
                 check=()=>{
                   if (localStorage.getItem("Journal")===true)  {
                       console.log(localStorage.getItem("Journal"));
@@ -18,7 +18,7 @@
        document.addEventListener("DOMContentLoaded", function(){
             const p = new User();
               if (check()===true){
-                        var j = JSON.parse(localStorage.getItem("Journal"));
+                         j = JSON.parse(localStorage.getItem("Journal"));
                        
                                       document.getElementById("button2").addEventListener("click", (event)=>{
                                           j.enterJournal(event);
