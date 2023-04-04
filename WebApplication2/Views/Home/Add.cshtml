@@ -5,20 +5,46 @@
  
         <script>
            const p = new User();
-            const j = new Journal();
+                  updateLocal=(j)=>{
+                      let jserial=JSON.stringify(j);
+                      localStorage.setItem("Journal",jserial); }
+        check=()=>{
+          if (localStorage.getItem("Journal")===true)  {
+              return true;
+        }
+         }
+        if (check===true){
+            let j = JSON.parse(localStorage.getItem("Journal"));
+            document.addEventListener("DOMContentLoaded", function() {  
+                          document.getElementById("button2").addEventListener("click", (event)=>{
+                              j.enterJournal(event);
+                              updateLocal(j);
+                                                                                                     });
+                           document.getElementById("button1").addEventListener("click", (event)=>{
+                              p.getData(event);
+                                                                                                     }); });
+            }
+        else{
+            let j = new Journal();
+            document.addEventListener("DOMContentLoaded", function() {  
+                          document.getElementById("button2").addEventListener("click", (event)=>{
+                              j.enterJournal(event);
+                              updateLocal(j);
+                                                                                                     });
+                           document.getElementById("button1").addEventListener("click", (event)=>{
+                              p.getData(event);
+                                                                                                     }); });
+            
+                    
+          }
           
-          document.addEventListener("DOMContentLoaded", function() {  
-              document.getElementById("button2").addEventListener("click", (event)=>{
-                  j.enterJournal(event);
-                                                                                         });
-               document.getElementById("button1").addEventListener("click", (event)=>{
-                  p.getData(event);
-                                                                                         }); });
-           const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-           // full date will be needed for storing entries in the archive
-           const d = new Date();
-           const day = days[d.getDay()];
-           document.writeln(day);
+          let today = new Date();
+          const dd = String(today.getDate()).padStart(2, '0');
+          const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+          const yyyy = today.getFullYear();
+          
+          today = mm + '/' + dd + '/' + yyyy;
+           document.writeln(today);
         
            
         </script>
