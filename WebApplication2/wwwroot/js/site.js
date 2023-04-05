@@ -9,7 +9,7 @@ class Journal {
         this.size++;
     }
     reset=()=>{
-        this.entries.splice(0,this.entries.length);
+        this.entries.splice(0,this.entries.length``);
        this.size = 0;
    }
    make() {
