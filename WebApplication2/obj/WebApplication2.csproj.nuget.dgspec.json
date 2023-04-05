@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/austinhutchen/Desktop/code/projects/dotnet/WebApplication2/WebApplication2/WebApplication2.csproj": {}
+    "/Users/austinhutchen/Desktop/code/projects/Journal.NET/WebApplication2/WebApplication2.csproj": {}
   },
   "projects": {
-    "/Users/austinhutchen/Desktop/code/projects/dotnet/WebApplication2/WebApplication2/WebApplication2.csproj": {
+    "/Users/austinhutchen/Desktop/code/projects/Journal.NET/WebApplication2/WebApplication2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/austinhutchen/Desktop/code/projects/dotnet/WebApplication2/WebApplication2/WebApplication2.csproj",
+        "projectUniqueName": "/Users/austinhutchen/Desktop/code/projects/Journal.NET/WebApplication2/WebApplication2.csproj",
         "projectName": "WebApplication2",
-        "projectPath": "/Users/austinhutchen/Desktop/code/projects/dotnet/WebApplication2/WebApplication2/WebApplication2.csproj",
+        "projectPath": "/Users/austinhutchen/Desktop/code/projects/Journal.NET/WebApplication2/WebApplication2.csproj",
         "packagesPath": "/Users/austinhutchen/.nuget/packages/",
-        "outputPath": "/Users/austinhutchen/Desktop/code/projects/dotnet/WebApplication2/WebApplication2/obj/",
+        "outputPath": "/Users/austinhutchen/Desktop/code/projects/Journal.NET/WebApplication2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/austinhutchen/.nuget/NuGet/NuGet.Config"

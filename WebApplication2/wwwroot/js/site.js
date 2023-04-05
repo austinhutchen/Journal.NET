@@ -28,7 +28,7 @@ display(string){
         // a txt file for now locally
         ev.preventDefault();
         if(data!==undefined){
-            for(var i=0;i<data.size;i++) {
+            for(let i=0;i<data.size;i++) {
                 this.add(data.entries[i]);
             }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WuipV/ydva9CWI1+CsKK93SFbHLVrk+fkCryza9gPyPH8/9gD0jhpjXoeKSo9FLondyFWL46Z6DyeJ/96WtYCg==",
+  "dgSpecHash": "Q5KD1r2syHyw9SgIfqBxDHHi/zYac15fDgNiyeKGY49C/zpNx9DTIet4L5TJtZQsL89Fxh+7tqz+93Y+BjD1MQ==",
   "success": true,
-  "projectFilePath": "/Users/austinhutchen/Desktop/code/projects/dotnet/WebApplication2/WebApplication2/WebApplication2.csproj",
+  "projectFilePath": "/Users/austinhutchen/Desktop/code/projects/Journal.NET/WebApplication2/WebApplication2.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

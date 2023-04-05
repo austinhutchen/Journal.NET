@@ -42,7 +42,9 @@
                                                                                                                  });
                                        document.getElementById("name").addEventListener("click", (event)=>{
                                           p.getData(event);
-                               
+                               document.getElementById("show").addEventListener("click", (event)=>{
+                                                                         event.preventDefault();
+                                                                         j.display(j.make()); });
                                                                                                                                                           }); 
                      
                                 
@@ -80,7 +82,7 @@
         <input type="submit" id="submit">
     </form>
     <button id ="delete">delete</button>
-     <button id ="display">show</button>
+     <button id ="show">show</button>
     <p style="margin-top: 200px" class="center">This is a basic footer with inline styling.</p>
     <script>
      
