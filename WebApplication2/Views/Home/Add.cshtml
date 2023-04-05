@@ -19,24 +19,32 @@
               let j = new Journal();
               if (check()===true){
                         var d = JSON.parse(localStorage.getItem("Journal"));
-                                      document.getElementById("button2").addEventListener("click", (event)=>{
+                                      document.getElementById("submit").addEventListener("click", (event)=>{
                                           j.enterJournal(event,d);
                                           updateLocal(j);
                                                                                                                  });
-                                       document.getElementById("button1").addEventListener("click", (event)=>{
+                                       document.getElementById("name").addEventListener("click", (event)=>{
                                           p.getData(event);
+                                          
                                                                                                                  }); 
+                                          document.getElementById("delete").addEventListener("click", (event)=>{
+                                              event.preventDefault();
+                                                                                            window.localStorage.removeItem("Journal");
+                                                                                            j.reset();
+                                                                                                                                                                                });
                         }
                     else{
                        
-                                      document.getElementById("button2").addEventListener("click", (event)=>{
+                                      document.getElementById("entry").addEventListener("click", (event)=>{
                                           j.enterJournal(event,undefined);
                                           updateLocal(j);
+                                          
                                                                                                                  });
-                                       document.getElementById("button1").addEventListener("click", (event)=>{
+                                       document.getElementById("name").addEventListener("click", (event)=>{
                                           p.getData(event);
-                                                                                                                 }); 
-                        
+                               
+                                                                                                                                                          }); 
+                     
                                 
                       }
            
@@ -63,15 +71,16 @@
     <img alt="welcome img" src="https://media.istockphoto.com/id/1223088904/vector/flag-ribbon-welcome-old-school-flag-banner.jpg?s=612x612&w=0&k=20&c=7YSaR2mu9H2ezvyONvjtqf8HRTzBaya1wNYFfwAiW80=">
     <h2> Submit your input below this line.</h2>
     
-    <form id="form"  style="padding-top:40px">
-        Enter your name: <input type="text" id="name" required placeholder="Your full name">
-        <input type="submit" id="button1">
+    <form id="form1"  style="padding-top:40px">
+        Enter your name: <input type="text" id="input1" required placeholder="Your full name">
+        <input type="submit" id="name">
     </form>
     <form id="form2"  style="padding-top:40px">
         Enter your journal entry: <textarea id="entry" required placeholder="Your journal entry"></textarea>
-        <input type="submit" id="button2">
+        <input type="submit" id="submit">
     </form>
-
+    <button id ="delete">delete</button>
+     <button id ="display">show</button>
     <p style="margin-top: 200px" class="center">This is a basic footer with inline styling.</p>
     <script>
      
