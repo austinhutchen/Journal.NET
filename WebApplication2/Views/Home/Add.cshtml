@@ -27,8 +27,8 @@
                                           p.getData(event);
                                           
                                                                                                                  }); 
-                                          document.getElementById("delete").addEventListener("click", ()=>{
-                                                                                            window.localStorage.removeItem("Journal");
+                                          document.getElementById("delete").addEventListener("click", (event)=>{
+                                              event.preventDefault();
                                                                                             j.reset();
                                                                                                                                                                                 });
                         }

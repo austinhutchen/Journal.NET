@@ -1,27 +1,23 @@
 class Journal {
     constructor() {
         this.entries = [];
-        this.size = 0;
     }
 
     add(_entry) {
         this.entries.push(_entry);
-        this.entries.push('\n');
-        this.size++;
     }
     stringify(){
         this.string=this.entries.toString();
+        this.string=this.string.replaceAll(',','\n');
     }
     reset=()=>{
-        this.entries=this.entries.slice(0,this.entries.length);
-        this.size=0;
+        let size =this.entries.length;
+        for(let i=0;i<size;i++){
+            this.entries.pop();
+        }
+        localStorage.removeItem("Journal");
    }
-   make() {
-        this.stringify();
-    }
-display(string){
-        alert(string);
-}
+
     enterJournal = (ev,data) => {
         // use state here to save journal entry , maybe into
         // a txt file for now locally
@@ -34,8 +30,8 @@ display(string){
         const text = document.getElementById("entry");
         if (text!==undefined) {
             this.add(text.value);
-            this.make()
-            this.display(this.string);
+            this.stringify()
+            alert(this.string);
         }
     }
 
