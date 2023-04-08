@@ -6,19 +6,18 @@ class Journal {
 
     add(_entry) {
         this.entries.push(_entry);
+        this.entries.push('\n');
         this.size++;
     }
+    stringify(){
+        this.string=this.entries.toString();
+    }
     reset=()=>{
-        this.entries.splice(0,this.entries.length``);
-       this.size = 0;
+        this.entries=this.entries.slice(0,this.entries.length);
+        this.size=0;
    }
    make() {
-
-        let string = "";
-        for (let i = 0; i < this.size; i++) {
-            string += "ENTRY " + (i + 1).toString() +  " :  " + this.entries[i] + "\n";
-        }
-   return string;
+        this.stringify();
     }
 display(string){
         alert(string);
@@ -35,7 +34,8 @@ display(string){
         const text = document.getElementById("entry");
         if (text!==undefined) {
             this.add(text.value);
-            this.display(this.make());
+            this.make()
+            this.display(this.string);
         }
     }
 

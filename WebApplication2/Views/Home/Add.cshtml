@@ -27,8 +27,7 @@
                                           p.getData(event);
                                           
                                                                                                                  }); 
-                                          document.getElementById("delete").addEventListener("click", (event)=>{
-                                              event.preventDefault();
+                                          document.getElementById("delete").addEventListener("click", ()=>{
                                                                                             window.localStorage.removeItem("Journal");
                                                                                             j.reset();
                                                                                                                                                                                 });
@@ -71,9 +70,9 @@
         </u>
     </h1>
     <img alt="welcome img" src="https://media.istockphoto.com/id/1223088904/vector/flag-ribbon-welcome-old-school-flag-banner.jpg?s=612x612&w=0&k=20&c=7YSaR2mu9H2ezvyONvjtqf8HRTzBaya1wNYFfwAiW80=">
-    <h2> Submit your input below this line.</h2>
+    <h2 style="padding-top:20px"> <i>How was your day?</i></h2>
     
-    <form id="form1"  style="padding-top:40px">
+    <form id="form1"  style="padding-top:20px">
         Enter your name: <input type="text" id="input1" required placeholder="Your full name">
         <input type="submit" id="name">
     </form>
