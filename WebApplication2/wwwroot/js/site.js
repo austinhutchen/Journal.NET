@@ -17,21 +17,30 @@ class Journal {
         }
         localStorage.removeItem("Journal");
    }
-
-    enterJournal = (ev,data) => {
+ display=()=>{
+        if(this.string!==undefined){
+            alert(this.string);
+        }
+        else{
+            alert('no input given');
+        }
+      
+ }
+    enterJournal = (data,ev) => {
+        ev.preventDefault();
         // use state here to save journal entry , maybe into
         // a txt file for now locally
-        ev.preventDefault();
         if(data!==undefined){
             for(let i=0;i<data.size;i++) {
+                // push into local object/cache storage
                 this.add(data.entries[i]);
             }
         }
         const text = document.getElementById("entry");
         if (text!==undefined) {
             this.add(text.value);
-            this.stringify()
-            alert(this.string);
+            // turn into string for easy reset
+            this.stringify();
         }
     }
 
@@ -52,8 +61,7 @@ class User {
     }
     
 
-    getData = (ev) => {
-        ev.preventDefault();
+    getData = () => {
         const text = document.getElementById("name");
         document.forms[0].reset();
         this.setName(text.value);

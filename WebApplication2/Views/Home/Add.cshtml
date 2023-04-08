@@ -18,32 +18,39 @@
             const p = new User();
               let j = new Journal();
               if (check()===true){
-                        var d = JSON.parse(localStorage.getItem("Journal"));
+                        const local = JSON.parse(localStorage.getItem("Journal"));
                                       document.getElementById("submit").addEventListener("click", (event)=>{
-                                          j.enterJournal(event,d);
+                                          j.enterJournal(local,event);
                                           updateLocal(j);
                                                                                                                  });
                                        document.getElementById("name").addEventListener("click", (event)=>{
                                           p.getData(event);
                                           
                                                                                                                  }); 
-                                          document.getElementById("delete").addEventListener("click", (event)=>{
-                                              event.preventDefault();
-                                                                                            j.reset();
-                                                                                                                                                                                });
-                        }
+                                          document.getElementById("delete").addEventListener("click", ()=>{
+                                                                                    j.reset();
+                                                                                    
+                                                                                                 });
+              document.getElementById("display").addEventListener("click", ()=>{
+                                                                        
+                                                                                       j.display(); });
+              }
+                             
+                                                                                         
+                                                                                                                                                                       
+                         
                     else{
                        
                                       document.getElementById("entry").addEventListener("click", (event)=>{
-                                          j.enterJournal(event,undefined);
+                                       
+                                          j.enterJournal(undefined,event);
                                           updateLocal(j);
                                           
                                                                                                                  });
                                        document.getElementById("name").addEventListener("click", (event)=>{
+                                        
                                           p.getData(event);
-                               document.getElementById("show").addEventListener("click", (event)=>{
-                                                                         event.preventDefault();
-                                                                         j.display(j.make()); });
+                               
                                                                                                                                                           }); 
                      
                                 
@@ -81,7 +88,7 @@
         <input type="submit" id="submit">
     </form>
     <button id ="delete">delete</button>
-     <button id ="show">show</button>
+     <button id ="display">show</button>
     <p style="margin-top: 200px" class="center">This is a basic footer with inline styling.</p>
     <script>
      
